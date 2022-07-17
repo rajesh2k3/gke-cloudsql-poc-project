@@ -12,7 +12,7 @@ resource "random_pet" "service_account" {
 resource "google_service_account" "node-pool-service-account" {
   account_id   = "np-${random_pet.service_account.id}"
   display_name = "${random_pet.service_account.keepers.cluster_name}-service-account"
-  description  = "default service account for nodes in 'sca node pool'"
+  description  = "default service account for nodes in 'ws9kiam node pool'"
 }
 
 
