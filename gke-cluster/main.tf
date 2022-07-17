@@ -25,10 +25,10 @@ resource "google_container_cluster" "ws9kiam-cluster" {
   networking_mode = "VPC_NATIVE"
 
   // use the default network and the corresponding subnet for my zone
-  #network    = "default"
-  #subnetwork = ""
-  network    = google_compute_network.vpc.name
-  subnetwork = google_compute_subnetwork.subnet.name
+  network    = "default"
+  subnetwork = ""
+  #network    = google_compute_network.vpc.name
+  #subnetwork = google_compute_subnetwork.subnet.name
 
   // set the version for the control plane
   release_channel {
