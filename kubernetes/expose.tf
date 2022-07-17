@@ -29,7 +29,7 @@ resource "kubernetes_service" "flask-service" {
     type = "ClusterIP"
   }
   depends_on = [
-    kubernetes_deployment.sca-project-depl,
+    kubernetes_deployment.dev-ws9kiam-depl,
     kubernetes_manifest.backendconfig
   ]
 }
