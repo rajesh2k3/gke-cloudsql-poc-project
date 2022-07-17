@@ -3,7 +3,8 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = ">=3.89.0"
+      #version = ">=3.89.0"
+      version = ">=4.24.0"
     }
   }
 }
@@ -11,10 +12,10 @@ terraform {
 // configure the terraform backend to use a workspace in terraform cloud
 terraform {
   backend "remote" {
-    organization = "daphney"
+    organization = "db"
 
     workspaces {
-      name = "sca-cluster"
+      name = "ws9kiam-dev-cluster"
     }
   }
 }
