@@ -1,4 +1,4 @@
-// this file configures a kubernetes service account to authenticate pods to google services.
+// This file configures a kubernetes service account to authenticate pods to google services.
 
 //create a new google service account when the kubernetes namespace changes
 resource "random_id" "service_account" {
@@ -58,9 +58,5 @@ resource "google_service_account_iam_binding" "ksa-bind" {
     "serviceAccount:${var.project_id}.svc.id.goog[${kubernetes_namespace.dev.metadata[0].name}/${kubernetes_service_account.kube_sa.metadata[0].name}]"
   ]
 }
-
-
-
-
 
 
