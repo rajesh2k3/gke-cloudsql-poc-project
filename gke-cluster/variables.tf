@@ -43,9 +43,15 @@ variable "master_version" {
   description = "cluster master version"
 }
 
+#variable "node_zones" {
+#  type = list(string)
+#  description = "location of nodes in nodepool/cluster"
+#}
+
 variable "node_zones" {
-  type = list(string)
+  type        = list(string)
   description = "location of nodes in nodepool/cluster"
+  default     = [ "us-central1-f", "us-central1-a" ]
 }
 
 variable "machine_type" {
@@ -53,5 +59,10 @@ variable "machine_type" {
   default = "g1-small"
   description = "type of nodes in node pool"
 
+}
+
+// get data about existing network
+data "google_compute_network" "default_vpc" {
+  name = "default"
 }
 
