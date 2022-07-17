@@ -1,12 +1,14 @@
 terraform {
+  required_version = ">= 1.2.4"
+
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = ">=3.89.0"
+      version = ">=4.24.0"
     }
     google-beta = {
       source  = "hashicorp/google-beta"
-      version = ">=3.89.0"
+      version = ">=4.24.0"
     }
     random = {
       source = "hashicorp/random"
@@ -16,10 +18,10 @@ terraform {
 
 terraform {
   backend "remote" {
-    organization = "daphney"
-
+    organization = "gkesqlpoc"
+    # Org ID="388293042553"
     workspaces {
-      name = "sca-database"
+      name = "ws9kiam-dev-database"
     }
   }
 }
