@@ -1,8 +1,7 @@
 variable "database_version" {
     type = string
-    default = "POSTGRES_13"
+    default = "POSTGRES_14"
     description  = "type of database and version"
-  
 }
 
 variable "region" {
