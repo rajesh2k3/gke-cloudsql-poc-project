@@ -11,7 +11,7 @@ resource "google_compute_global_address" "peering_address" {
   name          = "default-vpc-sql"
   purpose       = "VPC_PEERING"
   address_type  = "INTERNAL"
-  project = var.project_id
+  project       = var.project_id
   prefix_length = var.prefix_length
   network       = data.google_compute_network.default_vpc.id
 }
