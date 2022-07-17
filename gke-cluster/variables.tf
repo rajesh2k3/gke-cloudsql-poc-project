@@ -15,6 +15,7 @@ variable "roles" {
 variable "project_id" {
   type        = string
   description = "current project_id"
+  default     = "gkepoc-290118"
 }
 
 variable "region" {
@@ -37,7 +38,8 @@ variable "cluster_zone" {
 
 variable "master_version" {
   type = string 
-  default = "1.20.10-gke.301"
+  #default = "1.20.10-gke.301"
+  default = "1.23.7-gke.1400"
   description = "cluster master version"
 }
 
