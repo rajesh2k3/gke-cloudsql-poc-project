@@ -2,7 +2,8 @@
 
 
 // create a deployment
-resource "kubernetes_deployment" "sca-project-depl" {
+#resource "kubernetes_deployment" "sca-project-depl" {
+resource "kubernetes_deployment" "dev-ws9kiam-depl" {  
   metadata {
     name = "flask-deployment"
     namespace = kubernetes_namespace.dev.metadata[0].name
@@ -63,7 +64,8 @@ resource "kubernetes_deployment" "sca-project-depl" {
          }
         container {  
             name = "cloud-sql-proxy"
-            image = "gcr.io/cloudsql-docker/gce-proxy:1.17"
+            #image = "gcr.io/cloudsql-docker/gce-proxy:1.17"
+            image = "gcr.io/cloudsql-docker/gce-proxy:1.30.1"
             command = [
               "/cloud_sql_proxy",
               "-instances=${data.google_storage_bucket_object_content.db_connection.content}=tcp:5432"
