@@ -62,7 +62,7 @@ variable "machine_type" {
 }
 
 // get data about existing network
-data "google_compute_network" "default_vpc" {
-  name = "default"
-}
+#data "google_compute_network" "default_vpc" {
+#  name = "default"
+#}
 
