@@ -29,7 +29,7 @@ variable "zone" {
 variable "cluster_name" {
   type = string
   description = "name of cluster to be created"
-  default     = "ws9kiam-dev-cluster"
+  default     = "dev-ws9kiam-cluster"
 }
 
 variable "cluster_zone" {
