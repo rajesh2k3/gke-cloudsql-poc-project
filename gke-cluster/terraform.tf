@@ -1,5 +1,6 @@
 // state the providers and versions used in the project
 terraform {
+  required_version = ">= 1.2.4"
   required_providers {
     google = {
       source  = "hashicorp/google"
@@ -12,7 +13,7 @@ terraform {
 // configure the terraform backend to use a workspace in terraform cloud
 terraform {
   backend "remote" {
-    organization = "db"
+    organization = "gkesqlpoc"
 
     workspaces {
       name = "ws9kiam-dev-cluster"
