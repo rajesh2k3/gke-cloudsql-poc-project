@@ -1,4 +1,4 @@
-// API token for IEX cloud
+// API token for IEX Cloud
 resource "kubernetes_secret" "iex_cred" {
   metadata {
     name = "iex-cred"
