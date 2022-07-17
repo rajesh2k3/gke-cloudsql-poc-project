@@ -3,14 +3,14 @@ terraform {
   required_providers {
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "2.6.1"
+      version = "2.11.0"    #"2.6.1"
     }
     random = {
       source = "hashicorp/random"
     }
     google = {
       source = "hashicorp/google"
-      version = ">=3.89.0"
+      version = ">=4.24.0"
     }
   }
 }
@@ -18,10 +18,10 @@ terraform {
 // configure remote backend as a terraform cloud workspace
 terraform {
   backend "remote" {
-    organization = "daphney"
+    organization = "gkesqlpoc"
 
     workspaces {
-      name = "sca-kubernetes"
+      name = "dev-ws9kiam-kubernetes"
     }
   }
 }
