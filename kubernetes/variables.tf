@@ -1,5 +1,6 @@
 variable "project_id" {
-  type        = string
+  type     = string
+  default  = "gkepoc-290118"
 }
 
 variable "region" {
@@ -9,6 +10,7 @@ variable "region" {
 variable "namespace" {
   type        = string
   description = "namespace where the kubernetes objects will be created"
+  default     = "dev-ws9kiam-ns"
 }
 
 variable "db_host" {
