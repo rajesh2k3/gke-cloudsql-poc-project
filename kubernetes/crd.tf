@@ -1,4 +1,4 @@
-/* this file contains the custom resource defintions used to include http redirect(frontendconfig)
+/* This file contains the custom resource defintions used to include http redirect(frontendconfig)
  and custom health checks (backendconfig) */
 
 //custom resource definition for backendconfig
