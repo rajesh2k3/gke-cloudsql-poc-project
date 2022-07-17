@@ -23,20 +23,24 @@ variable "tier" {
 variable "database_name" {
     type = string
     description  = "name of the database to create in the instance"
+    default      = "dev-db-ws9kiam-admin"
 }
 
 variable "db_user" {
     type = string
     description  = "user for the instance"
+    default = "admin"
 }
 
 variable "db_pass" {
     type = string
     description  = "database user's password"
+    default = "admin"
 }
 
 variable "project_id" {
   type = string
+  default = "gkepoc-290118"
 }
 
 variable "prefix_length" {
